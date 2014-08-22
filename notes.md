@@ -3,6 +3,7 @@
 ## References
 
 - https://twitter.github.io/scala_school/basics.html
+- http://thecodinglove.com/post/94419673037/when-i-see-the-drupal-core-for-the-first-time
 
 ## Values/Variables
 
