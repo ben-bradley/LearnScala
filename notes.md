@@ -1,5 +1,9 @@
 # Scala vs. JavaScript
 
+## References
+
+- https://twitter.github.io/scala_school/basics.html
+
 ## Values/Variables
 
 - Scala
@@ -80,6 +84,39 @@ function capitalizeAll(args) {
 capitalizeAll([ 'blargh', 'honk' ]);
 ```
 
+## Classes
+
+- Scala
+```scala
+class Cat {
+  val name: String = "Chairman Meow"
+  def setName(n: String) {
+    name = n
+  }
+}
+
+val cat = new Cat
+cat.name // "Chariman Meow"
+cat.setName("Colonel Meow") // cat was demoted
+cat.name // "Colonel Meow"
+```
+
+- JavaScript
+```javascript
+function Cat() {
+  this.name = "Chairman Meow";
+  this.setName = function(n) {
+    this.name = n;
+  }.bind(this);
+  return this;
+}
+
+var cat = new Cat();
+cat.name; // "Chairman Meow"
+cat.setName('Colonel Meow');
+cat.name; // "Colonel Meow"
+```
+
 ## Arrays
 
 ### `.map`
@@ -93,3 +130,6 @@ Array("blargh", "honk").map { term => term.capitalize }
 ```javascript
 [ 'blargh', 'honk' ].map(function(term) { return term.toUpperCase(); });
 ```
+
+## Conclusion
+![badger](badger_nope.gif)
