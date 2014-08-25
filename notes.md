@@ -102,7 +102,7 @@ cat.setName("Colonel Meow") // cat was demoted
 cat.name // "Colonel Meow"
 ```
 
-- JavaScript
+- JavaScript (yeah, yeah, it's a Function, I know)
 ```javascript
 function Cat() {
   this.name = "Chairman Meow";
@@ -116,6 +116,86 @@ var cat = new Cat();
 cat.name; // "Chairman Meow"
 cat.setName('Colonel Meow');
 cat.name; // "Colonel Meow"
+```
+
+## If
+
+- Scala
+```scala
+var a = "blargh"
+var b = ""
+if (a == "blargh") {
+  b = "It's blargh."
+} else if (a == "honk") {
+  b = "It's honk."
+} else {
+  b = "I dunno."
+}
+
+b // "It's blargh."
+```
+
+- JavaScript
+```javascript
+var a = 'blargh',
+  b = '';
+if (a == 'blargh') {
+  b = "It's blargh.";
+} else if (a == 'honk') {
+  b = "It's honk.";
+} else {
+  b = "I dunno.";
+}
+
+b; // "It's blargh."
+```
+
+## Case
+
+- Scala
+```scala
+object foo {
+  var bar = "blargh"
+}
+
+def check () {
+  val result = foo.bar match {
+    case "blargh" => "BLARGH"
+    case "honk" => "HONK"
+    case _ => "DUNNO"
+  }
+  println(result)
+}
+```
+
+- JavaScript
+```javascript
+var foo = {
+  bar: 'blargh'
+};
+
+function ifCheck() {
+  if (foo.bar == 'blargh')
+    return 'BLARGH';
+  else if (foo.bar == 'honk')
+    return 'HONK';
+  else
+    return 'DUNNO';
+}
+
+function caseCheck() {
+  switch (foo.bar) {
+    case 'blargh':
+      var result = "BLARGH";
+      break;
+    case 'honk':
+      var result = "HONK";
+      break;
+    default:
+      var result = "DUNNO";
+  }
+  console.log(result);
+}
 ```
 
 ## Arrays
